@@ -1,5 +1,12 @@
-<div class="col">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque pariatur molestiae illum perspiciatis
-    architecto totam dicta rerum non itaque voluptas doloremque, labore in placeat nulla maiores accusantium
-    optio. Quibusdam, dolorem.
+<div class="row">
+    <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn" *ngFor="let gift of resultados;">
+        <div class="card">
+            <img class="card-img-top" [src]="gift.images.downsized_large.url" [alt]="gift.title">
+            <div class="card-body">
+                <h5 class="card-title">{{gift.title}}</h5>
+                <p class="card-text">{{gift.username}}</p>
+                <a [href]="gift.url" target="_blank" class="btn btn-primary w-100">Ver más</a>
+            </div>
+        </div>
+    </div>
 </div>
